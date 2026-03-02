@@ -231,6 +231,21 @@
         </div>
     </section>
 
+        <!-- Background Music Floating Player -->
+    <div class="fixed bottom-6 right-6 z-[60] flex items-center">
+        <button id="musicToggle" class="w-12 h-12 bg-white/80 backdrop-blur-md border border-pink-100 rounded-full shadow-lg flex items-center justify-center text-[#FFB7C5] hover:bg-white transition-all overflow-hidden">
+            <svg id="playIcon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+            <svg id="pauseIcon" class="w-6 h-6 animate-spin-slow" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+            </svg>
+        </button>
+        <audio id="bgm" loop preload="auto">
+            <source src="https://tk-korea.github.io/invitation/If%20I%20gained%20the%20world,%20but%20lost%20the%20savior_cinematic.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
     <footer class="bg-[#334D3D] py-24 text-center">
         <div class="max-w-5xl mx-auto px-6">
             <p class="serif text-4xl text-[#FFB7C5] mb-8 italic tracking-wide">Spring Home Coming Day</p>
