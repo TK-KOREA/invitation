@@ -253,6 +253,16 @@
                     };
 
                     const map = new kakao.maps.Map(mapContainer, mapOption);
+
+                    // 지도 타입 전환 컨트롤 추가 (일반지도 / 스카이뷰)
+                    const mapTypeControl = new kakao.maps.MapTypeControl();
+                    map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+                    // 지도 확대 축소 컨트롤 추가
+                    const zoomControl = new kakao.maps.ZoomControl();
+                    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+                    
                     const geocoder = new kakao.maps.services.Geocoder();
 
                     geocoder.addressSearch(address, (result, status) => {
